@@ -1,6 +1,6 @@
 # Laver 表图谱 · [English](README.md)
 
-本仓库的各个结果由 GPT Astra 完成。
+本仓库的大部分结果由 GPT Astra 完成。下界证明的思路借鉴了 `@test_alpha0` 提出的 Basic Laver Pattern（BLP），见[《Notes on Laver Tables》](https://arxiv.org/abs/2501.06733)。
 
 ## 主要结果
 

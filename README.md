@@ -1,6 +1,6 @@
 # Laver Table Atlas · [中文版](README.zh-CN.md)
 
-The results presented in this repository were obtained by GPT Astra.
+GPT Astra obtained most of the results in this repository. The lower-bound arguments draw on the Basic Laver Pattern (BLP) construction that `@test_alpha0` introduced in [*Notes on Laver Tables*](https://arxiv.org/abs/2501.06733).
 
 ## Results at a glance
 
