@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.pdf binary
+busy-beaver/q5-27/machine.tm -text
+busy-beaver/q5-27/transitions.txt -text
+laver_table_lower_bounds/code/*.py -text

@@ -1,0 +1,195 @@
+完整 25 行普通 BLP 图案严格搬到 j13(gamma16) 以下
+=================================================
+2026-11-09。ZFC + I3；同一个 Iter(j)。纸面证明及有限代数审计。
+
+结论
+----
+用户所指的图案是此前 larger-blp-seed.zh-CN.md 中的 P25：
+四份七行 p_init 逐段拼接，第一份保留七行，后三份各增加六行。
+它不是 C[6] 的 24 行 IBLP，也不是 C[7] 的 28 行 IBLP。
+
+25 行可以全部搬过去。事实上，完整末点为
+  xi=q(J7)(kappa2)<q(J7)(mu)=Sigma=J13(gamma16)，
+其中 mu=gamma256、q=J13(J14)(J12)，嵌入应用从左结合。
+保留原来的普通 BLP 行地址、步长和全部必需边，初始 linedness 参数仍可取 8。
+没有删去任何一行，且不需要把末点放到 Sigma 本身。
+
+进一步提取实际末点（2026-11-09）：可写成更短的旧词
+  xi=(J11(J3)(J7))(kappa2)=(J11(J3)(J7))(gamma2)。
+理由：q==_Sigma J11(J3)，在 application 第一参数中保留截断，且
+q(J7)(kappa2)=xi<Sigma，严格读值守卫成立。
+若 xi=gamma_r，则本篇末段实际直接给出
+  r>=2^f(P25,8)，并独立有 r>=2^(Psi^[4](8))。
+注意这里是 >=，而不是因 xi<Sigma 给 Sigma 索引的严格 >。
+并且 chi<xi<eta<Sigma，其中 eta=(J11(J3)(J7))(gamma3)
+是同目录 lower-bms-endpoint-eta.zh-CN.txt 的更高 BMS 端点。
+本次没有把 eta 的六类型 FGH 下界未经证明地下移到 xi。
+
+因此，写 Sigma=gamma_N，有两项独立结论
+  N>2^f(P25,8)，
+  N>2^(Psi^[4](8))，Psi(m)=f(p_init,m)。
+没有声称 f(P25,8)=Psi^[4](8)，也没有由语法行数直接推出函数值单调性。
+
+1. 新入口与更低的四阶段搬运算子
+-------------------------------
+本目录 entry-and-parametric-fgh-bound.zh-CN.txt §§1-3 已证明
+  cr q=kappa2，q(kappa2)=mu，q(kappa3)=chi，q(mu)=Sigma，
+其中 chi=J11(gamma3)，mu<chi<Sigma。
+令
+  g=q(j)，g2=q(J2)，b0=q(J7)，delta=q(gamma3)，xi=b0(kappa2)，
+  e=b0(j)，T=e(g2)，k=T(g)。
+已有实际点像
+  g:kappa0 -> kappa1 -> mu -> chi，
+  cr T=kappa1，T(kappa1)=mu，T(mu)=xi，k(kappa1)=chi，
+  xi<Sigma。
+
+现在令 H=T(j)。因为 g==_kappa2 j，
+  T(g)==_(T(kappa2))H。
+读值守卫由 H 自己给出：
+  H(kappa1)<H(mu)=T(kappa2)，
+所以 H(kappa1)=k(kappa1)=chi。
+另有 H(kappa0)=mu。由协变 H(mu)=T(kappa2)、
+H(T(kappa2))=T(kappa3)。这正是旧四阶段证明要求的全部起始接口。
+
+重要区别：旧四阶段使用 T_old=q_old(J10)，T_old(mu)=Theta=J11(kappa3)。
+直接换成 q(J10) 已能将其末点改为 Sigma；这里进一步使用更低的
+  T=b0(j)(q(J2))，其 T(mu)=xi<Sigma。
+因此完整 25 行得到严格余量。
+
+2. 四个源嵌入及可合法读取的同余
+-------------------------------
+令 D4=J14、D16=J65534，
+  R0=j，R1=D4(j)，R2=D16(j)，R3=D16(R1)。
+Dougherty II Theorem 7.2(c) 与 Lemma 7.1 给出准确有限缩放
+  D4(gamma_m)=gamma_(4m) (m<=4)，
+  D16(gamma_m)=gamma_(16m) (m<=16)。
+由此四个临界序列前缀依次为
+  R0: gamma0 -> gamma1  -> gamma2   -> gamma4，
+  R1: gamma0 -> gamma4  -> gamma8   -> gamma16，
+  R2: gamma0 -> gamma16 -> gamma32  -> gamma64，
+  R3: gamma0 -> gamma64 -> gamma128 -> gamma256。
+
+置 s_i=4^i。若 h_i 是 R_i 的临界点索引函数，则
+h_i(0)=s_i、h_i(s_i)=2s_i。Lemma 7.1 给
+  2s_i>=s_i+s_i(h_i(1)-s_i)，
+严格递增性给 h_i(1)>=s_i+1，故 R_i(kappa1)=gamma_(s_i+1)。
+
+有限商投影引理：对包含普通复合的 Iter(j) 中的 e,f，若
+e(gamma0)=f(gamma0)=gamma_s，则 e==_(gamma_(s+1)) f。
+证明：cr(e(j))=gamma_s，所以在有限商 P_(s+1) 中，e(j) 的余数为 2^s。
+右乘生成元是模 2^(s+1) 加一，故 e 的余数为 2^s-1；f 同理。
+Dougherty II Theorem 2.6 明确包括两操作代数 P_j，所以该论证允许普通复合。
+因此，对 i=1,2,3，
+  R_i ==_(gamma_(s_i+1)) R_(i-1)^[circ 3]。
+
+取 H_i=T(R_i)。定义
+  a_i=H_i(kappa0)=T(gamma_(s_i))，
+  b_i=H_i(kappa1)，c_i=H_i(a_i)=T(gamma_(2s_i))，
+  d_i=H_i(b_i)，e_i=H_i(c_i)=T(gamma_(4s_i))。
+全部是实际生成临界点，且
+  kappa0<kappa1<a_i<b_i<c_i<d_i<e_i。
+沿 T 搬运上面的同余，读取前先用
+  b_i=H_i(kappa1)<H_i(mu)=T(R_i(kappa1))=T(gamma_(s_i+1))。
+这给合法的准确等式
+  b_i=H_(i-1)^[circ 3](kappa1)。                   (2.1)
+没有在截断等号边界读取。
+
+3. 四个完整 p_start 的实际低桥
+-----------------------------
+置 G0=g；对 i=0,1,2，令 C_i=H_i(H_i)，
+  G_(i+1)=C_i(C_i(G_i))。
+归纳得到
+  G_i:kappa0 -> kappa1 -> a_i -> b_i。
+证明：若当前式成立，则 C_i 的 critical 为 a_i，固定 kappa0,kappa1，
+并有 C_i(a_i)=c_i、C_i(b_i)=d_i、C_i(c_i)=e_i、
+C_i(d_i)=H_i^[circ 3](kappa1)。两次 application 因而把低桥送成
+  kappa0 -> kappa1 -> e_i -> H_i^[circ 3](kappa1)。
+而 e_i=a_(i+1)，最后点由 (2.1) 等于 b_(i+1)。
+
+因此在每段的七点 (kappa0,kappa1,a_i,b_i,c_i,d_i,e_i) 上，
+  G_i,G_i,H_i,H_i,H_i(H_i)
+准确实现五行 p_start：
+  012:1，0123:1，01234:2，012345:2，23456:2。
+前一段的实际末点就是后一段的第三点。
+
+4. 直接构造每段七行 p_init，不靠图形猜测
+---------------------------------------
+任取上节一段，省略下标，将七点写成 alpha,beta,a,b,c,d,e。
+令
+  D=(H(H))(H(G))，E=D(H)，F=E(G)，L=F(H)。
+实际 application 协变给
+  D:c -> d -> e，
+  E(alpha)=a，E(beta)=b，E(a)=d，E(b)=e，
+  F:a -> b -> d -> e。
+F 固定 alpha,beta，因此
+  L(alpha)=b，L(beta)=d，L(b)=F(c)，L(d)=e。
+再取 u=L(a)、v=F(c)，单调性给 d<u<v<e。
+在九点 (alpha,beta,a,b,c,d,u,v,e) 上得到下列七行：
+
+行                  步长    实际 owner
+(0,1,2)               1     G
+(0,1,2,3)             1     G
+(0,1,2,3,4)           2     H
+(0,1,2,3,4,5)         2     H
+(0,1,2,3,5,6)         3     L
+(0,1,2,3,5,6,7)       3     L
+(0,1,2,3,5,6,7,8)     3     L
+
+这就是此前同一个 p_init 的全部行与步长，末三行确实共享 owner L。
+其中 critical 均为 alpha；每行每隔相应步长的像都由上述等式给出。
+最初三点、最后一点和任何已给的 linedness 参数保持不变。
+
+5. 拼接成原样的 25 行
+--------------------
+第 i 段 (i=0,1,2,3) 的地址映射为
+  phi_i(0)=0，phi_i(1)=1，phi_i(t)=t+6i (t>=2)。
+第一段保留七行；后三段仅略去其虚拟首行，再附加六行。
+因为 e_i=a_(i+1)，没有额外插点；段内新点位于相邻严格区间。
+每行的最后两个地址仍是全局行号与下一点号，步长保持原样。
+所有 owners 都使用第 4 节对应的一段，故这就是原 P25 的实际实现。
+
+衔接段数    行数    实际末点
+1            7      T(gamma4)
+2           13      T(gamma16)
+3           19      T(gamma64)
+4           25      T(gamma256)=xi<Sigma
+
+源三点 (kappa0,kappa1,mu) 有此前构造的实际 8-line。
+由普通 BLP 的定量定理，P25 的实现给终点 xi 处的 f(P25,8)-line，
+而临界计数给 gamma_(2^f(P25,8))<=xi<Sigma=gamma_N。
+这证明 N>2^f(P25,8)。依次对四段使用同一定理，则得到
+N>2^(Psi^[4](8))。二者是独立下界，不借用未证的函数值相等关系。
+
+6. 对后续普通 BLP 运算的含义
+---------------------------
+不只是原始静态图案的语法成立。它有实际 BLS owners 和真实初始长链，
+因此普通 BLP 论文许可的 M、补全、E 与删行操作，可以按其语义搬运定理继续做；
+相应数值函数 f 的整个递归已被定量定理覆盖，端点不会超过初始 xi。
+这不是把原版带标记 IBLP 的所有额外规则自动搬过来。
+也没有证明 P25 是这个端点下最大的可实现图案；当前问题只要求移植旧 P25。
+
+补充：同目录 blp25-both-completions.zh-CN.txt 另外给出完整标记 BLP
+M_star/E 版本的初始证书与定量桥应用，包含原生和标记两类补全。
+该补充使用自然截断语义及正确 paper guard，数值函数记为 f_star，
+不能不加说明地把本篇普通 f 改读为 f_star，或断言二者大小。
+
+7. 来源与独立检查
+-----------------
+公开基础：
+  Dougherty II，Theorem 2.6、Lemma 7.1、Theorem 7.2(c)：
+  https://arxiv.org/pdf/math/9503204
+  Qi，Notes on Laver Tables，v5，Lemma 2.5、Theorem 2.25：
+  https://arxiv.org/html/2501.06733v5
+
+原图案及旧四阶段证明的研究档案名如下。整理后的完整论证见 ../../laver_table_lower_bounds/lower_endpoints/blp.zh-CN.md。
+  scratch/k11-bound-20261109/larger-blp-seed.zh-CN.md
+  scratch/k11-bound-20261109/received-kappa11/proofs/kappa11_fourfold_iteration.txt
+  scratch/k11-bound-20261109/received-kappa11/proofs/pinit_transfer_108.txt
+本篇重做实际入口、搬运算子与严格 cap，保留那里的源有限缩放定理。
+
+../checks/check_blp25.py 检查四段全部行、全部 critical、90 条步长边、
+三个衔接相等式、全部严格点序和末点 xi<Sigma。记录见 ../checks/check_blp25.json。
+运行约 1.4 秒，125 个点名、75 个 owners、514 条点像事实，无巨大表或长下降。
+D16 作为公开定理指定的实际 J65534 压缩存放；程序不将它重造为任意抽象新生成元。
+缩放和有限商引理来自纸面证明，程序不是对此的穷举证明，也不是 Lean 验证。
+xi、eta 的较短旧词与严格截断读值见 ../../laver_table_lower_bounds/lower_endpoints/endpoints.zh-CN.md 第 4 节。

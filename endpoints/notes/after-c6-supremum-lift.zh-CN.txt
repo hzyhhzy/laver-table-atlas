@@ -1,0 +1,261 @@
+4096等号之后：上确界提升与 J13(gamma7)=gamma16384
+=================================================
+2026-11-09。继续研究 chi=J11(gamma3)=gamma_s 是否 s=2^2048。
+本文件未完成该最终等号，也未找到其反例。
+
+新结论：
+  (i) R=J14(J14) 与 J65520 在 gamma_(T+1) 处一致，T=2^2048；
+  (ii) J13(J15) ==_gamma65536 J_(2^256-2)；
+  (iii) J13(gamma7)=gamma16384。
+此前已由相邻研究证明的 J13(gamma6)=gamma4096 与本结论相容。
+本文件所有整体结论在固定I3嵌入的呈现中证明；未完成纯ZFC有限翻译。
+
+一、记号和已证输入
+-----------------
+J1=j，J_(a+1)=J_a(j)，括号中是嵌入时表示应用，不是函数复合。
+对序数的普通求值用 gamma 或 kappa 标明。
+
+  K=J11，b=J12，C=J13，E=J14；
+  mu=gamma256=C(kappa3)，chi=K(gamma3)，Theta=K(kappa3)；
+  T=2^2048，z=2^256；
+  R=C(J2)=E(E)，D=C(J3)=R(E)；
+  M=J65520，L=J65534，v=z-65536；
+  P=C(C)，U=b(b)，Q=K(J3)=U(b)，G=Q(j)，H=C(J15)。
+
+==_delta 是Laver成员关系截断，|V_alpha是普通定义域限制，不能混用。
+
+[D1] Dougherty, Critical points in an algebra of elementary embeddings,
+     https://arxiv.org/pdf/math/9205202，尤其第5节。
+[D2] Dougherty, Critical points in an algebra of elementary embeddings, II,
+     https://arxiv.org/pdf/math/9503204，第6--8节。
+[Dr95] Drapal, Persistency of cyclic left distributive algebras,
+       https://doi.org/10.1016/0022-4049(94)00142-1。
+
+已证且本文件实际使用的输入如下。
+1. (kappa0,kappa1,kappa2,kappa3)=(gamma0,gamma1,gamma2,gamma4)。
+   C(gamma0)=gamma1，C(gamma1)=gamma4，C(gamma2)=gamma16，
+   C(gamma3)=gamma64，C(gamma4)=mu。
+2. R|V_mu=M|V_mu、D|V_mu=L|V_mu，来自[D2]第8节的普通限制计算。
+3. b ==_mu J3(J3)，因此 C(b) ==_(C(mu)) D(D)。
+4. gamma_T<=chi<C(gamma16)<Theta，U ==_Theta P(P)。
+   详见本目录 exclude-2pow2048-rigidity.zh-CN.txt 及只读相邻
+   ../small-jn-km-100-20261109/REPORT.zh-CN.txt。
+5. 对257<=d<=65536：
+     65534 *_d 65534=v；                            (Square)
+     65520 *_d 14=65534；                           (F4)
+     v *_d y=v+y，1<=y<=65534。                     (Block)
+   Square的纸面归纳见只读相邻
+   c4-gamma4096-even-carries.zh-CN.txt 第1--4节；
+   F4、Block见 c4-filled-block-period-bridge.zh-CN.txt。
+   这里并未把任一公式扩大到65537。
+6. (z-16) *_d y=z-16+y，对y<=12及d<=T+1成立。
+   本目录 filled-block-and-normal-form.zh-CN.txt 第2节有证明。
+
+二、普通限制可以沿整个上确界提升
+------------------------------
+引理。设alpha为极限序数，e|V_alpha=f|V_alpha。若有beta+2<alpha且
+delta<=e(beta)=f(beta)，则 e ==_delta f。
+因此，alpha不可达且delta<e(<alpha)时，也可提升到delta。
+这里 e(<alpha)=sup_{xi<alpha} e(xi)。
+
+证明。对任意x及y属于V_delta，令x'=x intersect V_beta。
+x'属于V_(beta+1)，所以e(x')=f(x')。由elementarity，
+  e(x) intersect V_delta
+   =e(x intersect V_beta) intersect V_delta
+   =f(x intersect V_beta) intersect V_delta
+   =f(x) intersect V_delta。
+这正是所需的成员关系截断相等。
+第二个结论选择一个足够大的beta<alpha；不可达性保证可令beta+2<alpha。
+
+不能只把beta取成gamma255就停止：beta可以是mu以下的非临界序数。
+这正是本轮比有限谱像13107更有效的改进。
+
+三、R的实际截断超过目标chi
+-------------------------
+设sigma1=j(<kappa1)，sigma2=j(<kappa2)，S=K(sigma1)。
+[D1]给出
+  sigma1<kappa2，gamma3<j(sigma1)<sigma2<kappa3，
+  K|V_kappa2=(j compose j)|V_kappa2。
+因而
+  S=j(j(sigma1))=b(<kappa3)。
+另外，应用对上确界的协变性给出
+  b(sigma2)=C(<kappa3)。
+所以
+  gamma16=C(kappa2)<C(gamma3)<C(<kappa3)=b(sigma2)
+           <b(<kappa3)=S。
+这里最后一步使用sigma2<kappa3以及kappa3为极限序数。
+
+又由J2=j(j)，
+  J2(<kappa3)=j(sigma2)。
+于是
+  R(<mu)=C(J2(<kappa3))=C(j(sigma2))
+          >C(j(j(sigma1)))=C(S)>C(gamma16)>chi。      (1)
+普通限制R|V_mu=M|V_mu和第二节的提升引理现在给出
+  R ==_(C(gamma16)) M。                            (2)
+
+因为C(gamma16)和chi都是临界点，且C(gamma16)>chi>=gamma_T，
+所以C(gamma16)>=gamma_(T+1)。因此特别地
+  14 *_(T+1) 14=65520。                            (3)
+这是实际高截断恒等式，不是假设chi=gamma_T才成立的条件结论。
+不能把(3)误读成14*14在所有有限表中都等于65520。
+
+四、推到65536阶，并读取第7像
+---------------------------
+以下所有运算首先在A_65536中进行，输入(2)远高于本阶。
+由D=R(E)和(F4)，D=65534=L；由C(b)与D(D)的已知截断和(Square)，
+  C(b)=v。
+用左分配律以及(Block)，
+  P=C(C)=(C(b))(C(j))=v*14=v+14；
+  C(E)=P*14=(v*14)*14。
+行v+14的周期整除2^16，因为其低16位是14，高16..255位全1，
+连续位块引理给出它的gamma16像至少gamma65536。
+所以可把右参数14换成v+14，然后用左分配律：
+  C(E)=(v*14)*(v*14)=v*(14*14)=v*65520=z-16。
+同样，行z-16=v+65520的周期整除2^16，因此
+  H=C(J15)=(z-16)*14
+    =(v*65520)*(v*14)=v*(65520*14)=v*65534=z-2。
+故
+  H ==_gamma65536 J_(z-2)。                        (4)
+上述两次右参数替换只在有周期保护的本阶进行。
+
+另由U ==_Theta P(P)，
+  U=P(P)=(v*14)*(v*14)=v*(14*14)=z-16。
+于是输入6给出
+  Q=z-4，G=z-3，均在A_65536中成立。               (5)
+
+最后读取(4)。[D2] Lemma6.2给出J15(gamma3)=gamma7。
+因为C(gamma3)=gamma64，协变性给出
+  H(gamma64)=C(gamma7)。
+[Dr95]宽256的位伸展同态允许源阶65（允许上界65536），
+从而J_(z-2)(gamma64)=gamma16384。
+这个输出严格小于gamma65536，故(4)安全给出
+  C(gamma7)=gamma16384。                           (6)
+
+同一论证确定H(gamma_r)=gamma_(256*r)，0<=r<=255。
+r=256的候选输出恰好触及本节截断，不能从(4)读取。
+这也说明(6)没有自动证明C(gamma8)=gamma65536。
+
+五、与先前13107界的关系
+----------------------
+本轮较早先得到了另一个一般引理：若e(gamma_n)=gamma_(f(n))，
+a为2的幂且0<=b<2a，则
+  f(a+b)>=f(a)+f(b)-f(0)。
+证明：用[D2] Lemma6.2，取A=J_(2^a-1)，其gamma_b像为gamma_(a+b)；
+e(A)把gamma_(f(0))送到gamma_(f(a))，再用严格递增性比较gamma_(f(b))。
+当e固定gamma0时，即为二进制分段的超可加性。
+
+对R用已证权重
+  r1=1,r2=2,r4=16,r8=32,r16=256,r32=512,r64=4096，
+得到r128>=8192、r255>=13107=0x3333。
+独立A10核验了2576个可读取的引理实例；它没有计算任何目标大表。
+记录为check_dyadic_superadditivity.py/.json。
+第三节的上确界论证已经超过这条特定截断；不再把13107称为最佳界。
+
+六、当前尚缺什么
+----------------
+最终目标s=T仍未证明或证伪。当前无条件数值下界仍为s>=T。
+我们补上了R的实际高截断识别，并推得C的第7像等号；
+但未求出C(gamma8)，也未把G的正常形状从65536提升到T+1。
+
+特别是第1节的Square和Block目前只保证到65536。
+把这两个公式直接用到65537、T或T+1会重新引入缺口。
+F4这个特殊乘积可由第7节另证更高截断，不依赖这样的外推。
+形式上可将下一道较小关口写成
+  C(gamma8)=gamma65536 iff 13 *_65537 15=z-2；
+完整的chi等号则仍需要高得多的计算或另一条整体证明。
+
+没有新增子agent、自动化、commit或push；没有改动相邻研究目录。
+
+七、进一步的实际高截断：D也可直接提升
+------------------------------------
+[D1]印刷第23页给出的上确界严格链包含
+  J3(<kappa3)=J2(sigma2)>J6(kappa3)>J7(kappa3)>mu。
+其中最后的mu界也见同文第21、24页的临界点排序；
+这些是关于原嵌入的定理，不是对后续数值等号的猜测。
+原链还显示J2(<kappa3)=j(sigma2)>mu。
+
+分别对两条不等式施以C，得到
+  D(<mu)=C(J3(<kappa3))>C(mu)，
+  R(<mu)=C(J2(<kappa3))>C(mu)。
+第二节的提升引理因而同时给出
+  D ==_(C(mu)) L，R ==_(C(mu)) M。                  (7)
+这比第三节的R截断还高。特别地，在A_(T+1)中已经严格有
+  14*14=65520，65520*14=65534。                     (8)
+所以F4这一个特殊乘积现在确实可以超过65536；
+本结论不是将一般满位块引理擅自延长。
+
+还得到一个有用的反误用结论：
+  L(gamma256)>=C(mu)>chi>=gamma_T。                (9)
+证明：D(gamma256)=C(J3(kappa3))=C(kappa4)>C(mu)，
+用(7)即可排除L(gamma256)<C(mu)。
+因此不能把L(gamma_r)=gamma_(16*r)（r<256）扩到r=256。
+特别地，[D2] Theorem7.2给的是L(gamma16)=gamma256，
+它没有给L(gamma256)=gamma65536。后者与(9)相反。
+
+再令A=J65533。由首两个0位及L=A(j)，
+  A(gamma0)=gamma1，A(gamma1)=gamma16，
+  A(gamma2)=L(gamma16)=gamma256，
+  A(gamma4)=L(gamma256)>chi>=gamma_T。              (9a)
+因此不能把“首两像为1、m”的指数下界m^r擅自视为普遍取等：
+这里m=16，第4像已经远大于16^4=65536。
+这并不反驳本题的实际G或实际C的取等，因为A是另一个嵌入，
+而(9a)的点位于chi上方。
+
+八、将最终目标化为三个明确的有限等式
+----------------------------------
+本节每个乘积都在同一个A_d内，d=T+1。置
+  v=2^256-2^16，u=2^256-16，q=2^256-4。
+有如下充要条件：
+
+  chi=gamma_T
+    iff
+  65534*65534=v，v*65520=u，q*16=2^T。             (10)
+
+充分性。(7)及已知C(b)==_(C(mu))D(D)给出S=C(b)=65534*65534。
+P=C(C)=S*14。若第一个等式成立，则
+  U=P(P)=(v*14)*(v*14)=v*(14*14)=v*65520=u。
+第二个等式和输入6给出Q=U(b)=u*12=q；
+而Q(gamma4)=chi，第三个等式就给出chi=gamma_T。
+
+必要性。chi=gamma_T时，指数取等刚性给出G=z-3、Q=z-4。
+由于Q=U*12，支撑包含性质 bits(U) subset bits(Q-1) 表明
+U的第256位及以上都为0。
+U的临界点为gamma4，首个临界像为gamma256；
+首个临界像的连续1位刻画因此给出U=u。
+
+还需确定S。由U==_Theta P(P)以及P=b(J2)，
+P的低16位为14，且P(gamma16)=C(gamma16)。
+在d<=index(C(gamma16))的本阶，P的周期整除2^16，因此
+  U=P(P)=P*14=C(J14)。
+C(gamma4)=gamma256<gamma_d，所以第C行的周期至少32，
+其第12列和第14列严格递增。由此
+  S=C(b)=C*12<C*14=U=u<z。
+第四节已经证明S mod2^65536=v；S<2^256迫使S=v。
+再用U=P(P)=S*(14*14)=v*65520，得到第二个等式。
+第三个等式由Q=q与Q(gamma4)=chi立即得到。证毕。
+
+最后一个等式也等价于
+  J_(2^256-3)(gamma256)=gamma_T；
+因为q的临界点为gamma2，首个临界像为gamma256，
+再对q(j)应用协变性即可。这正是[D2] Conjecture8.1的n=2实例。
+本文件未取得这个实例的证明，也不声称它在后续文献中无人解决。
+
+由(8)和左分配律，本节第一个未决乘积还可改写成
+  65534*65534=65520*65520=14*65520。                (11)
+这是依赖本节高截断输入的等式，不是任意阶的整数左幂恒等式。
+新的有界求值若使用(11)，须明确列出这些输入。
+
+九、有界实验记录
+----------------
+probe_after_supremum.py把新证明的14*14=65520、65520*14=65534，
+以及相应已证周期上界加入原按需求值器。源目录只读；为允许
+A65537，私有副本partial_backward_large.py只把原8192位入场检查
+改为65537位。每个查询仍有6秒、40000次调用、12000条目上限，
+没有构造任何完整大表，也没有构造A_(T+1)。
+
+独立A8的第13、14行全部512个乘积通过回归检查；
+实际统计显示它们没有触发新增高截断分支，不能把此项称为
+新分支的独立覆盖。高截断输入的依据是本文件的纸面证明。
+14 *_65537 65520及65520 *_65537 65520两种等价求值均遇到资源界；
+未返回目标值。这不证明等式，也不证明其为假。
+完整统计保存在同名json。失败后没有再增加这些查询的预算。

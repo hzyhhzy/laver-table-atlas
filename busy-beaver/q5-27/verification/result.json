@@ -1,0 +1,44 @@
+{
+  "working_states": 27,
+  "transitions_checked": 54,
+  "unmerged_states": 32,
+  "forward_table_checks": 86368,
+  "q_less_than_p": 42439,
+  "unshifted_disagreements": 2253,
+  "machine_checks": {
+    "states": 27,
+    "initial": 12,
+    "raw_copies": 912,
+    "centre": 5,
+    "early": {
+      "12": 0,
+      "24": 0
+    },
+    "blank": [
+      [
+        12,
+        300
+      ],
+      [
+        24,
+        2630
+      ]
+    ],
+    "restarts": 7,
+    "products": [
+      [
+        549,
+        636
+      ],
+      24287
+    ],
+    "seeded_successes": [
+      [
+        3,
+        8,
+        126983,
+        11
+      ]
+    ]
+  }
+}

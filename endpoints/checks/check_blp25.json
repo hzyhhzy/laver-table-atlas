@@ -1,0 +1,540 @@
+{
+  "status": "PASS",
+  "transport": "T=B0(j)(q(J2)), B0=q(J7), q=J13(J14)(J12)",
+  "base_linedness": 8,
+  "all_25_rows": true,
+  "strict_endpoint": "T(gamma256)=xi=B0(kappa2)<B0(mu)=Sigma",
+  "Sigma": "J13(gamma16)",
+  "stages": [
+    {
+      "blocks": 1,
+      "rows": 7,
+      "endpoint": "T(gamma_4)",
+      "all_rows_and_edges": "PASS",
+      "edge_count": 24,
+      "strictly_below_Sigma": true
+    },
+    {
+      "blocks": 2,
+      "rows": 13,
+      "endpoint": "T(gamma_16)",
+      "all_rows_and_edges": "PASS",
+      "edge_count": 46,
+      "strictly_below_Sigma": true
+    },
+    {
+      "blocks": 3,
+      "rows": 19,
+      "endpoint": "T(gamma_64)",
+      "all_rows_and_edges": "PASS",
+      "edge_count": 68,
+      "strictly_below_Sigma": true
+    },
+    {
+      "blocks": 4,
+      "rows": 25,
+      "endpoint": "T(gamma_256)",
+      "all_rows_and_edges": "PASS",
+      "edge_count": 90,
+      "strictly_below_Sigma": true
+    }
+  ],
+  "rows": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    [
+      0,
+      1,
+      8,
+      9
+    ],
+    [
+      0,
+      1,
+      8,
+      9,
+      10
+    ],
+    [
+      0,
+      1,
+      8,
+      9,
+      10,
+      11
+    ],
+    [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12
+    ],
+    [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      13
+    ],
+    [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    [
+      0,
+      1,
+      14,
+      15
+    ],
+    [
+      0,
+      1,
+      14,
+      15,
+      16
+    ],
+    [
+      0,
+      1,
+      14,
+      15,
+      16,
+      17
+    ],
+    [
+      0,
+      1,
+      14,
+      15,
+      17,
+      18
+    ],
+    [
+      0,
+      1,
+      14,
+      15,
+      17,
+      18,
+      19
+    ],
+    [
+      0,
+      1,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20
+    ],
+    [
+      0,
+      1,
+      20,
+      21
+    ],
+    [
+      0,
+      1,
+      20,
+      21,
+      22
+    ],
+    [
+      0,
+      1,
+      20,
+      21,
+      22,
+      23
+    ],
+    [
+      0,
+      1,
+      20,
+      21,
+      23,
+      24
+    ],
+    [
+      0,
+      1,
+      20,
+      21,
+      23,
+      24,
+      25
+    ],
+    [
+      0,
+      1,
+      20,
+      21,
+      23,
+      24,
+      25,
+      26
+    ]
+  ],
+  "steps": [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3
+  ],
+  "numerical_bounds": [
+    "N>2^f(P25,8)",
+    "N>2^(Psi^4(8)); Psi(m)=f(p_init,m)"
+  ],
+  "marked_entry": {
+    "status": "PASS for all initial hypotheses",
+    "Sat": [
+      {
+        "row": 1,
+        "p": 0,
+        "e": 1,
+        "B(e)": 0
+      },
+      {
+        "row": 3,
+        "p": 1,
+        "e": 2,
+        "B(e)": 1
+      },
+      {
+        "row": 5,
+        "p": 1,
+        "e": 2,
+        "B(e)": 1
+      },
+      {
+        "row": 6,
+        "p": 2,
+        "e": 3,
+        "B(e)": 2
+      },
+      {
+        "row": 9,
+        "p": 1,
+        "e": 8,
+        "B(e)": 1
+      },
+      {
+        "row": 11,
+        "p": 1,
+        "e": 8,
+        "B(e)": 1
+      },
+      {
+        "row": 12,
+        "p": 8,
+        "e": 9,
+        "B(e)": 8
+      },
+      {
+        "row": 15,
+        "p": 1,
+        "e": 14,
+        "B(e)": 1
+      },
+      {
+        "row": 17,
+        "p": 1,
+        "e": 14,
+        "B(e)": 1
+      },
+      {
+        "row": 18,
+        "p": 14,
+        "e": 15,
+        "B(e)": 14
+      },
+      {
+        "row": 21,
+        "p": 1,
+        "e": 20,
+        "B(e)": 1
+      },
+      {
+        "row": 23,
+        "p": 1,
+        "e": 20,
+        "B(e)": 1
+      },
+      {
+        "row": 24,
+        "p": 20,
+        "e": 21,
+        "B(e)": 20
+      }
+    ],
+    "marks": [
+      {
+        "row": 4,
+        "mark": 3,
+        "trace": [
+          3,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 6,
+        "mark": 5,
+        "trace": [
+          5,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 7,
+        "mark": 5,
+        "trace": [
+          5,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 7,
+        "mark": 6,
+        "trace": [
+          6,
+          2
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 10,
+        "mark": 9,
+        "trace": [
+          9,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 12,
+        "mark": 11,
+        "trace": [
+          11,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 13,
+        "mark": 11,
+        "trace": [
+          11,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 13,
+        "mark": 12,
+        "trace": [
+          12,
+          8
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 16,
+        "mark": 15,
+        "trace": [
+          15,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 18,
+        "mark": 17,
+        "trace": [
+          17,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 19,
+        "mark": 17,
+        "trace": [
+          17,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 19,
+        "mark": 18,
+        "trace": [
+          18,
+          14
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 22,
+        "mark": 21,
+        "trace": [
+          21,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 24,
+        "mark": 23,
+        "trace": [
+          23,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 25,
+        "mark": 23,
+        "trace": [
+          23,
+          1
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      },
+      {
+        "row": 25,
+        "mark": 24,
+        "trace": [
+          24,
+          20
+        ],
+        "PosSource": true,
+        "semantics": "carrier = factor globally"
+      }
+    ],
+    "quantitative_bridge": "marked-BLP-quantitative-transfer.zh-CN.md",
+    "scope": "Initial marked certificate only; recursive closure is the cited paper theorem"
+  },
+  "paper_inputs": [
+    "new entry proof",
+    "Dougherty II Theorem 7.2(c), Lemma 7.1",
+    "published finite-quotient projection lemma",
+    "ordinary BLP quantitative theorem"
+  ],
+  "scope": "Every finite edge checked; published scaling and quantitative theorems are inputs, not Lean-certified here",
+  "diagram": {
+    "point_names": 125,
+    "point_classes": 109,
+    "proved_strict_pairs": 4168,
+    "owners": 75,
+    "facts": 514,
+    "merged_names": 16,
+    "lazy_application_rewrites": 58,
+    "ld_decompositions": 0,
+    "owner_identity_pairs": 6,
+    "membership_approximations": 86,
+    "proved_gap_instances": 0
+  },
+  "seconds": 1.375
+}

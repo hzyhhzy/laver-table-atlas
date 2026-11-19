@@ -1,0 +1,166 @@
+J13(gamma13)、J13(gamma14)、J13(gamma15) 全部严格小于 J11(gamma3)
+=================================================================
+2026-11-09。纸面证明；固定 I3 嵌入 j 的通常呈现。
+
+记 J1=j，J_(a+1)=J_a(j)，括号中的嵌入运算为 application。
+gamma_r 是 Iter(j) 临界点的递增枚举。
+kappa0=gamma0，kappa1=gamma1，kappa2=gamma2，kappa3=gamma4。
+本文的序数不等式不是把自然数谱索引和临界点混在一起比较。
+
+令
+  K=J11，A=J12，B=J13，E=J14，
+  U=A(gamma16)，chi=K(gamma3)，Theta=K(kappa3)。
+
+结论
+----
+  B(gamma13)<B(gamma14)<B(gamma15)<U<chi<B(gamma16)<Theta。
+
+因此之前 upper-list-and-gap-order.zh-CN.txt 列出的四种可能排序，
+现在只剩最后一种。更精确地，控制这个值域缺口的非临界点
+  s=B(j(<kappa1))=E(<kappa3)
+满足 gamma15<s<gamma16。
+
+本证明不依赖 chi=gamma_(2^2048) 的猜测，也不依赖 B 在输入
+gamma9 至 gamma15 上的精确值。它没有给 B(gamma15) 新的独立
+自然数上界；chi 的下界也不能倒过来当作 B(gamma15) 的上界。
+
+一、输入与来源
+--------------
+[D1] R. Dougherty, Critical points in an algebra of elementary embeddings,
+第5节，印刷第22--24页：
+https://arxiv.org/pdf/math/9205202
+
+[D2] R. Dougherty, Critical points in an algebra of elementary embeddings, II,
+第7--8节及有限表与嵌入截断的对应：
+https://arxiv.org/pdf/math/9503204
+
+[Dr95] A. Drapal, Persistence of cyclic left distributive algebras,
+J. Pure Appl. Algebra 105(2) (1995), 137--165：
+https://www.sciencedirect.com/science/article/pii/0022404994001421
+https://doi.org/10.1016/0022-4049(94)00142-1
+所用位伸展定理的完整参数条件列在出版商公开摘要中；本证明引用
+这个已发表定理，不声称重新形式化或逐页复核其原始证明。
+
+本地先前推导：
+  ../small-jn-km-100-20261109/c3-gamma1024-drapal.zh-CN.txt
+  ../small-jn-km-100-20261109/c4-after-drapal.zh-CN.txt
+  ../small-jn-km-100-20261109/upper-list-and-gap-order.zh-CN.txt
+这里重新给出实际需要的推导，以免只凭旧文件的状态摘要判断。
+
+二、有限位伸展给 E(gamma15)=gamma60
+----------------------------------
+把每个二进制位重复4次，记为 h：
+  h(sum a_i 2^i)=sum a_i(2^(4i+4)-2^(4i))。
+
+[Dr95] 的定理取 d=2、v2(d)=1、源阶 k=16：
+  k=16 <= 2^(2^(1+1))=16。
+故 h:A16 -> A64 确为同态，且 h(1)=15。
+
+A64 中左平移 x |-> 14*x 也满足左分配递推，而且 14*1=15。
+按 1<=x<2^16 作有限归纳，得到
+  14 *_64 x=h(x)。
+具体归纳步为
+  14*(x+1)=(14*x)*15，h(x+1)=h(x)*h(1)=h(x)*15。
+这里的等式在目标表 A64 中解释；源表 A16 的 x+1 尚未绕回。
+
+取 x=2^15，便有
+  14 *_64 2^15=15*2^60。
+右侧严格介于0和2^64之间，2进赋值为60。有限表与临界点像的
+对应于是给出 E(gamma15)=gamma60。
+同理，E(gamma_r)=gamma_(4r) 对所有 0<=r<16 成立。
+严格的 r<16 不能省去：E(gamma16)=gamma256，而不是 gamma64。
+
+还使用 B(gamma3)=gamma64。这是已有精确低端事实，可由 [D2]
+第8节重新得到：设 D=B(J3)、L=J65534、mu=gamma256，文中给出
+  D|V_mu=L|V_mu。
+结合 B(gamma1)=gamma4、J3(gamma1)=gamma3，以及第7节的
+L(gamma4)=gamma64，有
+  B(gamma3)=D(B(gamma1))=D(gamma4)=L(gamma4)=gamma64。
+这里使用定义域上的普通限制，输入 gamma4 严格低于 mu。
+
+三、把旧的 gamma12<s<gamma16 改进为 gamma15<s<gamma16
+------------------------------------------------------
+置
+  sigma=j(<kappa1)，tau=j(sigma)，s=B(sigma)。
+符号 f(<alpha) 表示 {f(beta):beta<alpha} 的严格上确界。
+[D1] 第5节给出
+  kappa1<sigma<kappa2，j(<sigma)<gamma3<tau。
+
+因为 E=B(j)，应用协变恒等式给出
+  E(s)=E(B(sigma))=B(j(sigma))=B(tau)>B(gamma3)=gamma64。
+另一方面，第二节的有限计算给出
+  E(gamma15)=gamma60<gamma64<E(s)。
+E 严格递增，故 gamma15<s。
+
+由 sigma<kappa2 与 B(kappa2)=gamma16，又有 s<gamma16。
+综上
+  gamma15<s<gamma16。                                      (1)
+
+这是本轮新增的关键一步。仅使用 E 在 gamma15 上的线性值；
+没有把线性规律跨过 gamma16，也没有假设 B(gamma15)=gamma_(4^15)。
+
+四、缺口的两侧确实包含 U 和 chi
+------------------------------
+下面重证旧缺口引理所需的各式。
+令 sigma2=j(<kappa2)，S=K(sigma)，zeta=B(<kappa2)。
+
+[D1] 给出
+  tau<sigma2<kappa3，
+  K|V_(kappa2)=(j o j)|V_(kappa2)，
+  B|V_(kappa2)=(j o J2)|V_(kappa2)。
+
+cr A=kappa2，故 A(sigma)=sigma。由 B=A(j)，
+  s=B(A(sigma))=A(tau)。                                  (2)
+上确界搬运和 K(kappa1)=kappa3 给出
+  S=K(j(<kappa1))=A(<kappa3)，
+而普通限制给出 S=j(j(sigma))=j(tau)。
+
+J2(<kappa2)=tau，故 B 的普通限制给出
+  zeta=j(<tau)<B(kappa2)=gamma16。                          (3)
+这里最后的严格性也由 cofinality 给出：kappa2 正则且
+B(kappa2)>kappa2，所以 B(<kappa2)<B(kappa2)。
+
+对 j(<tau) 施以 A，并用(2)，得
+  B(<s)=A(j(<tau))=A(zeta)<A(gamma16)=U。                  (4)
+
+其次，B(<kappa3)=A(sigma2)。由于 kappa2<kappa3、
+sigma2<kappa3，有
+  gamma16=B(kappa2)<A(sigma2)<A(<kappa3)=S。
+对 j(<sigma)<gamma3 施以 K，得到
+  A(<S)<K(gamma3)=chi。
+于是
+  U=A(gamma16)<A(<S)<chi。                                (5)
+
+最后，由 gamma3<tau 及 S=j(tau)，有
+  chi<K(tau)=A(K(sigma))=A(S)
+     =A(j(tau))=B(A(tau))=B(s)。                         (6)
+
+结合(1)、(4)--(6)，立即得到
+  B(gamma15)<=B(<s)<U<chi<B(s)<B(gamma16)。                (7)
+再由 B 严格递增，得到全文所称的三项排序。
+
+五、补记与上端 Theta 的关系
+--------------------------
+若希望一并保留旧排序的上端，令 T=A(sigma2)=B(<kappa3)。
+上面已证 gamma16<T。
+又 K 的普通限制给出
+  j(<sigma2)=K(<kappa2)<K(kappa2)=mu。
+上确界搬运于是给出
+  B(gamma16)<=B(<T)=A(j(<sigma2))<A(mu)=Theta。
+最后的 A(mu)=Theta 来自 K(kappa2)=mu、A=K(j)。
+
+六、对后续研究的意义与边界
+------------------------
+1. 三项 B13、B14、B15 都位于 chi 以下，不存在其中某项已跨到
+   chi 与 B16 之间的情况；原先四种可能顺序已被排除三种。
+2. 固定整数输入中，B 在 gamma15 与 gamma16 之间跨过 U、chi。
+   这不等于说该区间只有这两个临界点，也不量化这个跳跃的大小。
+3. 本文没有证明 chi 的独立上界，也没有否定 B13--15 可能有新的
+   高阶运算或 FGH 下界。不能从 chi>=gamma_(2^2048) 推出
+   B15<gamma_(2^2048)。
+4. 本文为 I3 嵌入呈现中的纸面证明；未声称新增 Lean 形式化或
+   已完成该非临界上确界论证的纯 ZFC 有限表翻译。
+
+核查记录：check_j13_gap_order.py/.json 只审查位伸展参数、有限
+乘积和用到的整数索引。它引用 Dr95 定理，不是其独立证明；
+非临界点排序的证明是以上第三、四节的数学推导。

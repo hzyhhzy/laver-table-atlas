@@ -1,0 +1,252 @@
+j13(gamma16) 的新入口及 FGH 下界
+================================
+2026-11-09。ZFC + I3 下的纸面证明；不是本次新增的 Lean 证明。
+固定同一个 I3 嵌入 j，所有实际 owners 都属于同一个 Iter(j)。
+
+0. 结论及依赖范围
+-----------------
+写 J_a=j_(a)，J_1=j，J_(a+1)=J_a(j)。两嵌入间的括号表示 application；
+普通复合单独写 o 或上标 circ。gamma_n 为生成临界点的递增枚举。
+令
+  Sigma=J13(gamma16)=gamma_N，Lambda=lim(BMS)。
+
+沿用此前已经整理的相对 BMS 编译、有限类型函数比较与原版 IBLP 安全类引理，
+本篇给出新的实际入口并逐项验证它满足那些引理的接口，得到
+  N > F_(C[6])(2047)，
+其中 C=I[0][2][1]^8，I 是原版 IBLP 初式，采用原版基本列。
+更准确的大输入结论见第 6 节。另有 N>F_C(6)。
+
+令 alpha_1=Lambda，alpha_(n+1)=Lambda*omega^(alpha_n)。C[6] 的准确秩为
+alpha_6。在另行采用 omega^Lambda=Lambda 的闭包事实时，它可简写成
+  Lambda^(Lambda^(Lambda^(Lambda^Lambda)))。
+不能仅凭序型相等，把 F_(C[6]) 换成采用任意其他基本列的同名函数。
+以上是对有限谱索引 N 的界，不是将不可数的 Sigma 直接与自然数比较。
+
+另外，旧的 25 行普通 BLP 图案 P25 也能完整实现于 Sigma 严格以下：
+  N > 2^f(P25,8)，并独立有 N > 2^(Psi^[4](8))，Psi(m)=f(p_init,m)。
+完整逐行构造在本目录 blp25-strict-transfer.zh-CN.txt。
+没有把这两个 BLP 函数值与上述 FGH 值擅自排序。
+
+本篇不是重证所有相对 BMS 基础引理的自足专著。复用的证明逐项列于第 7 节；
+新完成的是小端点入口、完整接口的参数化，以及严格 cap 的保真替换。
+
+1. 原小项资料、严格截断及目标点位置
+---------------------------------
+记
+  K0=J11，A0=J12，B0=J13，E0=J14，mu=gamma256，
+  chi=K0(gamma3)，Theta=K0(kappa3)=A0(mu)。
+这里 kappa0=gamma0、kappa1=gamma1、kappa2=gamma2、kappa3=gamma4。
+后文保持 Theta 与 Sigma 不同，绝不把 K0(kappa3) 改写成 Sigma。
+
+需要的公开小项事实为
+  cr A0=kappa2，A0(kappa2)=kappa3，A0(kappa3)=mu，
+  B0(kappa0)=kappa1，B0(kappa1)=kappa3，B0(kappa2)=gamma16，
+  B0(kappa3)=mu，E0(kappa3)=gamma16，
+  J7(kappa0)=gamma3，J7(kappa1)=kappa3，J7(kappa2)=mu，
+  K0(kappa0)=kappa2，K0(kappa1)=kappa3，K0(kappa2)=mu。
+以及 membership 等价
+  K0 ==_mu j o j，A0 ==_mu j(J2)。
+来源：Dougherty I §5，尤其 printed p.21；Dougherty II §8。
+https://arxiv.org/pdf/math/9205202
+https://arxiv.org/pdf/math/9503204
+
+使用规则 e(f) o e=e o f；cr(e(f))=e(cr f)；LD；
+e ==_u f 可沿 h 搬成 h(e)==_(h(u))h(f)，也可在 application 第一参数
+保持同一截断。读 ordinal image 时须有至少一侧输出严格小于截断。
+
+已有 mu<chi<Sigma<Theta。为使新入口不循环依赖，回顾后两个比较：
+设 s=j(<kappa1)、s2=j(<kappa2)。Dougherty I 给出
+  kappa1<s<kappa2，j(<s)<gamma3<j(s)<s2<kappa3，
+  K0|V_kappa2=(j o j)|V_kappa2。
+令 u=B0(s)=A0(j(s))，则 u<gamma16。又
+  chi=K0(gamma3)<K0(j(s))=A0(K0(s))
+      =A0(j(j(s)))=B0(A0(j(s)))=B0(u)<B0(gamma16)=Sigma。
+令 t=A0(s2)=B0(<kappa3)。有 gamma16<t<mu，且
+  B0(<t)=A0(j(<s2))=A0(K0(<kappa2))<A0(mu)=Theta。
+故 Sigma=B0(gamma16)<Theta。上确界协变只在真实像处使用。
+
+2. 新的实际入口 q
+-----------------
+定义
+  P=B0(B0)，U=A0(A0)，X=B0(E0)，q=X(A0)。
+旧入口是 q_old=K0(J3)。LD 给 q_old=U(A0)。
+
+沿 A0 搬运 A0 ==_mu j(J2)，得到
+  U ==_Theta A0(j(J2))=B0(A0(J2))=B0(P)=P(P)。       (2.1)
+
+由 B0=A0(j) 及 cr A0=kappa2，有 B0 ==_kappa2 j；沿 B0 搬运得到
+  P ==_gamma16 E0。                                (2.2)
+这一步不需要计算 A_16，也不依赖从有限测试猜测的周期。
+由 application 协变，P(gamma16)=B0(B0(kappa2))=Sigma。
+沿 P 搬运 (2.2)，并用 P(E0)=B0(E0)=X，得到 P(P)==_Sigma X。
+结合 Sigma<Theta 及 (2.1)，得到 U==_Sigma X，继而
+  q ==_Sigma q_old。                               (2.3)
+
+准确计算 X 的临界序列：
+  cr X=kappa3，X(kappa3)=mu，X(mu)=Sigma。
+它固定 kappa2。因此 q 的准确像为
+  cr q=kappa2，q(kappa2)=mu，q(mu)=Sigma。            (2.4)
+旧入口有 q_old(kappa3)=chi。因 chi<Sigma，(2.3) 可严格读取为
+  q(kappa3)=chi。                                  (2.5)
+
+特别地 q(mu)=Sigma<Theta=q_old(mu)，所以不能将 (2.3) 当成全局等式。
+本篇只用 (2.4)-(2.5) 的实际新入口；没有把旧高端点直接重新命名。
+
+3. 所需低背景与初始长链
+-----------------------
+以下论证对满足 cr q=kappa2、q(kappa2)=mu 的任意实际 q 都成立；
+暂写 Omega=q(mu)，chi=q(kappa3)。本篇代入的 Omega 就是 Sigma。
+定义
+  g=q(j)，g_i=q(J_i)，b0=q(J7)，
+  delta=q(gamma3)，xi=b0(kappa2)，eta=b0(gamma3)，
+  e=b0(j)，J=e(g_2)，k=J(g)，x=e(g)。
+LD 给 J=x(x)。实际点序和点像为
+  mu<delta<chi<xi<eta<b0(kappa3)<b0(mu)=Omega；
+  g:kappa0 -> kappa1 -> mu -> chi；
+  cr J=kappa1，J(kappa1)=mu，J(mu)=xi；
+  k(kappa0)=mu，k(kappa1)=chi，k(mu)=xi。             (3.1)
+
+这里 e 的 critical 是 delta，因此固定 kappa0,kappa1,mu。
+e(g)==_delta g，沿 J 搬运并用 LD：
+  e(g_3)=J(e(g)) ==_(J(delta)) J(g)=k。
+而 e(g_3)(kappa1)=e(delta)=chi<xi=J(mu)<J(delta)，所以读值合法。
+再降低截断得到 k==_delta g_3。
+
+同一个 j 提供实际 8-line (kappa0;kappa1,mu)。具体而言，j、J3 给
+2-line (kappa0;kappa1,kappa3)；取 B0 像给
+2-line (kappa1;kappa3,mu)，链乘法得到 2*2^2=8-line。
+这里是构造实际 owners，不是从 mu 的索引 256 反推长链。
+
+粗但独立的下界：g 将此 8-line 放大成终点 chi 的 2048-line；
+q(B0):kappa0 -> kappa1 -> chi -> Omega 再将它放大为
+2048*2^2048=2^2059-line。因此 index(Omega)>=2^(2^2059)。
+后面的 FGH 界不依赖实际计算这一巨大长链。
+
+4. 全图案上确界：没有暗用 q=q_old
+---------------------------------
+先令 T0=q(J10)。源关系 J10 ==_mu J8(J2) 沿 q 搬运给
+  T0 ==_Omega b0(g)(g_2)。
+由 g==_kappa2 j，b0(g)==_xi e，因此 T0==_xi J。
+再利用 K0==_mu j o j，可得
+  k=J(g) ==_xi T0(g)=q(K0) ==_Omega g o g，
+所以 k==_xi g o g。对 t<mu，k(t)<k(mu)=xi 是严格读取守卫，故
+  k(t)=g(g(t))，k(<mu)=(g o g)(<mu)。               (4.1)
+
+令 s=j(<kappa1)、s2=j(<kappa2)、v=k(<mu)。
+源背景有严格链
+  J7(s)=J8(<kappa3)>J8(s2)=J9(<kappa2)>J9(s)
+       =J10(<kappa2)>J10(s)=K0(<kappa2)>K0(s)。     (4.2)
+这些都是公开小项点像与上确界协变的直接结果，见 Dougherty I pp.22-24。
+
+q 固定 s，e 固定 s,kappa1,mu。于是
+  g(<kappa1)=x(<kappa1)=s，x(kappa1)=J(kappa1)=mu，
+  v=J(s)，J(<mu)=x(s)，k(s)<J(s)<x(s)。
+其中最后两个严格关系也可直接由 s<mu 及 mu 是极限序数得到。
+ordinary composition 的二次幂记为 k^2。由 k o J=J o g、J=x(x)，
+  k^2(v)=J(g^2(s))=J(k(s))<J(x(s))=x(x(s))=e(k(s))。
+另一方面 (4.1)、(4.2) 及 q(s)=s 给
+  k(s)=g^2(s)=q(K0(s))<q(J7(s))=b0(s)。
+b0(s) 为极限序数，所以
+  e(k(s))<e(<b0(s))=b0(j(<s))<b0(gamma3)=eta。
+综上
+  k^2(k(<mu))<eta<Omega。                           (4.3)
+
+定义实际 actors
+  b=k(g)，c=k(b)，d=c(k)，e1=d(g)，f=e1(k)，
+  A=c(d)，V=c(e1)，Q=A(k)，
+以及 t=k(chi)、a=k(xi)、c_out=k(t)。
+有 c=(k o k)(g)，c^2=(k o k)(g o g)，c^2(xi)=a，A=c^2(k)。
+因此
+  c^2(<a)=k^2((g o g)(<mu))=k^2(v)。
+生成临界点 a 是正则基数，xi<a=k(xi)，所以 k(<xi)<a。于是
+  A(<a)=c^2(k(<xi))<c^2(<a)=k^2(v)<eta。            (4.4)
+这是对全部 t<a 的统一 cap；不要求 A(a)<Omega。
+本节处处只使用第 3 节的 q 接口与未改动的源 j，完全没有使用 q=q_old。
+
+5. 原相对 BMS 编译器的六个接口
+-----------------------------
+把旧低开放 fan 构造中的 (j,kappa2,kappa3,J10,J11,gamma3) 换成
+(g,mu,chi,J,k,delta)。第 3 节正好给出一般前端插入引理的全部假设。
+由 b(b)(k):(kappa0,kappa1,mu)->(mu,xi,t)，任意实际 m-line
+都能驱动 m 次前端插入，保留所有隐含边和备用端口。其末端 <=t，m>=2 时<t。
+再取 f 像并下移两个端口 1，得到相对 BMS 的两条实带，种子恰为
+B_m=(0^m)(1^m)，标量实参出口 <=chi，输出 <=a。
+它给出 S(u)(m)=K_(B_m)^(0,u)(m) 的全输入、全外环境合同。
+
+置 Tstar=J(g_3)、rho=J(delta)、Z=A(Tstar)。
+g_3==_delta g o g 沿 J 搬运；准确像加严格守卫给
+  Tstar(kappa0)=xi，Tstar(kappa1)=t，Tstar(mu)=rho，Tstar(xi)=a；
+  xi<t<rho<Tstar(chi)<Tstar(v)<a。
+另外 A:(kappa0,kappa1,mu,chi)->(mu,chi,a,c_out)，
+V:mu->chi->a->c_out。完整合同的环境表为
+
+类型  环境       辅助源点       首实带左端       闭输出上界
+0     id         mu             chi              a
+1     V          chi            a                c_out
+2     Q          a              c_out            A(xi)
+3     Q o V      c_out          A(xi)            A(t)
+4     Z          A(xi)          A(t)             A(rho)
+5     Z o V      A(t)           A(rho)           A(Tstar(chi))
+6     Z o Q      A(rho)         A(Tstar(chi))    eta
+
+前六个闭出口由 (4.4) 小于 eta。最后一行只取实际封口 C0<a：
+  Q(C0)<Q(<a)=A(v)，
+  Z(Q(C0))<Z(A(v))=A(Tstar(v))<eta。               (5.1)
+没有将 ordinary composite 与上确界无条件交换。
+
+每行辅助点与前一类型入口相同，首实带点与前一类型出口相同。
+零复制 owner 固定更低域坐标，并把当前入口送到更新后的整对象出口。
+原相对 BMS 的全对象归纳因而逐层适用，不是只比较一个固定输入的函数值。
+g 的四点链提供 f0(m)=m*2^m 的预热，故高类型有效载荷为 B_(m*2^m)，
+且 m*2^m>=2 保证 (5.1) 所需的严格封口。得到 D_i（i=1,...,6）全部合同。
+全对象复制归纳复用 [D3]；它的旧高 cap 已由 (4.4)、(5.1) 独立替换。
+
+6. 纯数值结论
+-------------
+快 BMS K 的零下标是底对象，后继迭代 2^m 次，极限取原 BM4 [2^m]。
+定义 f0(m)=m*2^m，S 如上，
+  D_i(u)(...)(m)=K_(B_(m*2^m))^(i,u)(...)(m)，1<=i<=6。
+以下应用左结合：
+  Tnum=D5(D4)(D3)(D2)(D1)，W=D6(D5)(D4)(D3)(D2)(D1)，
+  Unum=Tnum(Tnum(S))，Qnum=Unum(Unum(f0))，
+  M=Qnum(8)，Ynum=W(S)(f0)(8)。
+这些自然数定义完全不涉及 N 或 Sigma。
+
+[D4] 的全类型比较给 W(S)>=Unum^4、Unum>=S、
+Qnum>=_3 H_(C[7])，其中尾比较量化所有最终输入>=3。
+M>=f0(8)=2048，强前缀增长给
+  Ynum>=Unum^4(f0)(8)>=Unum(Qnum)(8)>=S(Qnum)(8)
+      >=Qnum(Qnum(8))=Qnum(M)>=H_(C[7])(M)。
+第 5 节将实际 8-line 送到以 eta 为终点的 Ynum-line，临界计数给
+  gamma_(2^Ynum)<=eta<Sigma=gamma_N，故 N>2^Ynum。
+
+FGH 采用 F0(n)=n+1、F_(alpha+1)(n)=F_alpha^[n+1](n)，
+极限采用原版语法 [n]。[D4] 第 6 节的全量词比较给
+  y>=x+1，x>=2 => H_(C[7])(y)>=F_(C[6])(x)+1。
+分别取 (x,y)=(M-1,M)、(2047,M)、(6,M)，得到
+  N>F_(C[6])(M-1)+1，N>F_(C[6])(2047)，N>F_C(6)。
+最后一式只使用 F_C(6)=F_(C[6])(6)。没有假设任意 FGH 的下标单调性。
+
+7. 可核查的依赖与程序范围
+-------------------------
+[D1]、[D2]、[D5] 保留研究稿的档案名。入口与严格端点的整理版见 ../../laver_table_lower_bounds/lower_endpoints/endpoints.zh-CN.md，六类型及数值比较的整理版见 ../../laver_table_lower_bounds/lower_endpoints/bms.zh-CN.md。
+[D1] scratch/k11-bound-20261109/k11-BMS-input-243.zh-CN.md，§3-7：
+     8-line、一般低控制与逐次前端插入；源资料见两篇 Dougherty 论文。
+[D2] scratch/k11-bound-20261109/k11-six-type-strict-cap.zh-CN.md，§2-7：
+     本篇重新核查的参数化接口与严格上确界链。
+[D3] ../../laver_table_lower_bounds/proofs/scratch/iblp030-8h-20261015/
+     lift-low-open-fan-and-typed-gap.txt，§1-3；
+     hardy-root-C7-q5-single-file.txt，§3、5（实际相对复制和全对象合同）。
+     前一文件 §5 的旧未决类型缺口不能当成定理；本篇通过表格和 (5.1) 支付。
+[D4] ../../laver_table_lower_bounds/01-blp-tower.zh-CN.md，§1-4、6-8：
+     原版 C 的准确基本列、安全类、全类型数值比较及跨输入 FGH 比较。
+     本篇不沿用其 §5 的旧高端点，而另行证明低端点实现。
+[D5] scratch/small-jn-km-100-20261109/upper-list-and-gap-order.zh-CN.txt，§3，
+     b32-b64-below-theta.zh-CN.txt：旧严格点序，本篇第 1 节已重述所需部分。
+
+check_entry.py 审计入口有限代数与严格输出守卫。
+check_six_types.py 审计实际低点、七行接口、有限严格次序。
+check_blp25.py 审计全部 25 行的实际点像。
+这些程序不证明上确界引理、公开有限商定理、BMS 良序或全类型归纳。
+这些分别由纸面推导和上述明确依赖承担；程序通过不能替代它们。
+没有计算巨大 Laver 表或长下降；没有改旧研究、发布仓库、commit 或 push。

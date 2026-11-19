@@ -1,0 +1,13 @@
+'Gamma11.RankI3.steel_app_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.steel_critical_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankSteelBridge
+'Gamma11.RankI3.first_row_of_steel_crossings' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankSteelReduction
+'LaverTables.Steel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.first_row_of_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.j11_gamma3_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.j11_at_any_enumeration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.finite_table_reading_of_I3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@j11_at_any_enumeration : ∀ {height : Ordinal.{u_1}} {j : Emb height},
+  IsWitness j → ∀ {γ : ℕ → ↑(Below height)}, Enumerates j γ → leftPower j 11 (point (γ 3)) (point (γ targetIndex))
+replaying RankSteelEndpoint

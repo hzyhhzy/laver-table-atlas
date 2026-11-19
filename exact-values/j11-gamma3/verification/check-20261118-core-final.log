@@ -1,0 +1,305 @@
+replaying EndpointArithmetic
+replaying CanonicalTables
+replaying EndpointReduction
+replaying EndpointMidpoint
+'Gamma11.quarter_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying QuarterRow
+replaying EndpointGrowth
+'Gamma11.row11_zero_through_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_iff_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_iff_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_iff_fourth_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_iff_geometric_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying Gamma11Endpoint
+'Gamma11.one_two_at_256' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.twelve_thirteen_reach' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.normal_transports' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying TwelveCut
+replaying BianeRelocation
+'Gamma11.Backward.mul_projects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.mul_distrib' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.has_period_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.two_block_period' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.compose_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.period_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardTables
+'Gamma11.Backward.power_from_column' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.smaller_generated_period' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardRows
+replaying CriticalSpectrum
+replaying SpectrumTransfer
+'Gamma11.outer_protected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.inner_period_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.inner_protected' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CarryProtection
+'Gamma11.aligned_block_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BlockPrefix
+'Gamma11.ones_shift_of_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.odd_outer_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying SpectrumBits
+'Gamma11.lift_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CarryLift
+'Gamma11.old_slice_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying OldSlices
+'Gamma11.critical_four_contradiction' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying NormalFormTest
+'Gamma11.linear_equality_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.exponential_equality' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying IndexRigidity
+'Gamma11.protected_block_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.protected_block_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.protected_prefix_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.critical_four_applied' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.critical_four_actor' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CriticalFour
+'Gamma11.geometric_background_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.normal_form_necessary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_iff_normal_form_and_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying EndpointNecessity
+'Gamma11.target_of_old_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying EndpointAssembly
+'Gamma11.old_diagonal_of_odd_corners' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_of_odd_corners' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying OddDiagonal
+'Gamma11.corners_of_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BinarySlices
+'Gamma11.odd_corners_of_homomorphisms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_of_table_laws' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying DiagonalHom
+'Gamma11.doubled_period_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.diagonal_hom_of_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying GeometricHalf
+'Gamma11.geometric_step_from_bit' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying DiagonalDigits
+replaying IntervalCut
+'Gamma11.critical_four_to_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying SixteenCrossing
+'Gamma11.full_block_jump' depends on axioms: [propext, Quot.sound]
+'Gamma11.cross_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.saturated_full_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying FullBlock
+'Gamma11.full_sixteen_periods' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.full_sixteen_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying FullBlockFour
+'Gamma11.short_period_induction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.period_guards_of_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying ShortPeriod
+'Gamma11.fixed_test_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.constructed_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.transport_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.small_source_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.first_move_from_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.last_guard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.critical_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CriticalSixteen
+'Gamma11.critical_sixteen_to_255' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.cross_256' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying WideCrossing
+'Gamma11.unspecialized_fourth_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying FourthJump
+'Gamma11.visible_wide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.periods_from_equality_case' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying WidePeriods
+'Gamma11.accumulated_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.dense_last_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.dense_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying DenseDigits
+'Gamma11.normal_form_of_last_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.normal_square_in_stretch_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying LastNormalProduct
+'Gamma11.manuscript_midpoint_conclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying ManuscriptEndpoint
+'Gamma11.shifted_action_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.guarded_shift_multiplication' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying ShiftedBoundary
+'Gamma11.shifted_crossing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.shifted_digit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.even_stretched_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying ShiftedCrossing
+'Gamma11.square_of_mixed_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying MixedNormal
+'Gamma11.native_periods_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying NativeSixteen
+'Gamma11.dense16_inherited' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.mixed_aligned_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.mixed_congr_256' depends on axioms: [propext, Quot.sound]
+replaying MixedDigits
+'Gamma11.mixed_small_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.mixed_to_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying MixedInduction
+'Gamma11.mixed_width_of_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RepeatDensity
+'Gamma11.shifted_period_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying ShiftedPeriods
+'Gamma11.native_stretch_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.native_stretch_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.native_stretch_actions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.native_stretch_hom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.sixteen_data_from_crossings' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying NativeStretch
+'Gamma11.double_width_bridges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.auxiliary_stretches_from_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.special_last_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.sixteen_data_from_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying DoubleWidths
+'Gamma11.restore_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.finite_block_of_restore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.mixed_periods_of_restore' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying TailRestore
+'Gamma11.Backward.restore_of_period_compression' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.restore_of_full_digit' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardBlocks
+'Gamma11.Backward.aligned_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.full_block_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardShift
+'Gamma11.Backward.digit_row_iff_predecessors' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying DigitBorrows
+'Gamma11.Backward.lower_tail_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardTail
+'Gamma11.Backward.local_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.inner_step_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardLocal
+'Gamma11.Backward.period_lifts_once' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.short_powers_of_digit' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardLift
+'Gamma11.Backward.boundary_step_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardBoundary
+'Gamma11.Backward.full_from_mixed_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardAssemble
+'Gamma11.Backward.encode_dominates' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardCoding
+'Gamma11.Backward.powers_at_smaller_digit' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardPowers
+'Gamma11.Backward.mixed_right_from_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.predecessor_on_code' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardTransfer
+'Gamma11.Backward.compression_at_every_generator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.finite_restoration' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying BackwardCompression
+'Gamma11.Backward.width_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.Backward.full_of_wide_digits' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying OneBitBlock
+'Gamma11.native_stretch_with_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.all_width_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.licensed_readings' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying StretchComposition
+'Gamma11.short_periods_from_restore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.target_from_local_restoration' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying LocalPeriodTarget
+'Gamma11.protected_odd_at_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying GeometricCarry
+'Gamma11.protect_geometric_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying DiagonalInduction
+'Gamma11.geometric_degree_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.diagonal_from_cubic_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying GeometricBootstrap
+'Gamma11.repeated_background' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CubicDensity
+'Gamma11.square_at_cubic_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CubicSquare
+'Gamma11.cubic_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CubicPrefix
+'Gamma11.geometric_cubic_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.diagonal_from_first_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying CubicSeed
+'Gamma11.target_from_one_column' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying GeometricPrefix
+replaying RankI3
+'Gamma11.RankI3.critical_of_moved_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankOrdinals
+replaying RankFormulas
+'Gamma11.RankI3.map_set_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.generator_has_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankBounds
+'Gamma11.RankI3.application_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.applyEmb_commutes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.applyEmb_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankApplication
+'Gamma11.RankI3.section_natural' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.applyEmb_ld' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankAlgebra
+'Gamma11.RankI3.TraceEq.app' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankTrace
+'Gamma11.RankI3.QuotientLaws.correspondence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.Word.critical_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankQuotients
+'Gamma11.RankI3.Word.trace_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.quotientLaws_of_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankSpectrum
+'Gamma11.RankI3.dyadicPoint_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.dyadic_self_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankDyadic
+'Gamma11.RankI3.initial_critical_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.actual_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.actual_endpoint_iff_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.quotientLaws_of_first_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.enumeration_iff_first_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.first_row_of_left_powers_cofinal' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankReadout
+'Gamma11.RankI3.trace_iff_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.finiteTraceEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.residue_of_rank_agreement' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankFiniteClasses
+'Gamma11.RankI3.fourth_above_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.lift_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.thirteen_above_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.thirteen_restriction_at_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankTransport
+'Gamma11.RankI3.word_composition_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.eleven_composition_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.eleven_agrees_below_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankComposition
+'Gamma11.RankI3.imageSup_natural' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.imageSup_lt_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.section_below_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankImageSup
+'Gamma11.RankI3.low_crossings' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.thirteen_two_and_three_of_restrictions' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankLowCrossings
+'Gamma11.RankI3.expansion_8_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankSmallSections
+'Gamma11.RankI3.block_action_8_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.block_action_8_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankSectionBlocks
+'Gamma11.RankI3.shifted_section_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.shifted_fourteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankSectionIteration
+'Gamma11.RankI3.two_ordinary_restrictions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.two_target_constants' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankSectionConstants
+'Gamma11.RankI3.run_moves_to_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.thirteen_second_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.early_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.full_small_critical_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.appendix_B3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.appendix_B3_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankEarlySource
+'Gamma11.RankI3.appendix_C2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.appendix_E' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankWideSource
+'Gamma11.RankI3.even_carries_and_target_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.target_square_of_row_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.target_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankDenseSource
+'Gamma11.RankI3.endpoint_from_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_rank_quotient_laws' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_iff_finite_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_growth_and_table_laws' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.lower_bound_for_enumeration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.equality_for_enumeration_iff_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_at_witness_of_remaining' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.normal_form_from_target_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.target_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_remaining_laws' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankEndpoint
+'Gamma11.RankI3.endpoint_from_one_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_local_block_periods' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_growth_restore_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_backward_row_and_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_wide_digits_and_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_growth_and_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_of_growth_and_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankGeometric
+'Gamma11.RankI3.endpoint_of_first_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Gamma11.RankI3.endpoint_iff_first_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+replaying RankEndpointGrowth

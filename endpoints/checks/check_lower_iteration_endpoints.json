@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "short_word": "e=(Q(J7))(j), Q=J11(J3)",
+  "proved_order": "chi < e(gamma512) < e(gamma513) < e(gamma1024) < xi",
+  "U_comparisons": [
+    {
+      "cap": "e(gamma512)",
+      "relation": "UNRESOLVED"
+    },
+    {
+      "cap": "e(gamma513)",
+      "relation": "UNRESOLVED"
+    },
+    {
+      "cap": "e(gamma1024)",
+      "relation": "UNRESOLVED"
+    }
+  ],
+  "structures": [
+    {
+      "pattern": "p1",
+      "rows": 3,
+      "edges": 8,
+      "base_linedness": 8,
+      "endpoint": "e(gamma512)"
+    },
+    {
+      "pattern": "p_start.del",
+      "rows": 4,
+      "edges": 12,
+      "base_linedness": 8,
+      "endpoint": "e(gamma513)"
+    },
+    {
+      "pattern": "p_init",
+      "rows": 7,
+      "edges": 24,
+      "base_linedness": 8,
+      "endpoint": "e(gamma1024)"
+    }
+  ],
+  "first_cap_lower_bound": "index >= 2^(g^[256](8)) > 2^^259; g(m)=m*2^m",
+  "second_cap_lower_bound": "index >= m_(omega+2)(2), by the published m=1 reduction",
+  "paper_inputs": [
+    "base 8-line",
+    "G2 scaling for r<256",
+    "delta=gamma257",
+    "G2(j) at gamma257 shifts to gamma513",
+    "ordinary BLP quantitative theorem",
+    "U<xi from the previous strict supremum proof"
+  ],
+  "scope": "finite profiles and structural verification; no giant evaluation or inferred order",
+  "diagram": {
+    "point_names": 100,
+    "point_classes": 65,
+    "proved_strict_pairs": 1349,
+    "owners": 50,
+    "facts": 348,
+    "merged_names": 35,
+    "lazy_application_rewrites": 29,
+    "ld_decompositions": 0,
+    "owner_identity_pairs": 7,
+    "membership_approximations": 58,
+    "proved_gap_instances": 0
+  },
+  "seconds": 1.062
+}
